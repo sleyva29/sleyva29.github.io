@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio Sheila Leyva</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="images/programador (1).png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header" style="background-color:#0B132B;">
+				<a href="index.html" class="title">Sheila Leyva</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper" >
+
+				<!-- Main -->
+					<section id="main" class="wrapper" style="background-color:#1C2541;">
+						<div class="inner">
+							<figure>
+							<h1 class="major">Dataset analysis:  Key personal indicators of heart disease from kaggle.</h1>
+							<span class="image fit"><img src="images/robina-weermeijer-NIuGLCC7q54-unsplash.jpg" alt="" /></span>
+							<figcaption>
+								<em>Image from <a href="https://unsplash.com/@averey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Robina Weermeijer</a> en <a href="https://unsplash.com/es/fotos/NIuGLCC7q54?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  								</em>
+							</figcaption>
+							</figure>
+
+							<p>In this work, the data set will be used: Key personal indicators of heart disease, data from 400,000 adults, obtained during the 2020 annual survey of the Centers for Disease Control and Prevention (CDC, for its acronym in English) belonging to to the Department of Health and Human Services in the United States. Originally the data set contained around 300 attributes, however, it was reduced to only 18 variables, which are the ones that are publicly available on the Kaggle platform [6].
+								Nearly half of Americans (47%), including African Americans, American Indians, Alaska Natives, and Whites; have at least 1 to 3 risk factors for heart disease. A brief description of the attributes included in this dataset is added below:
+								HeartDisease: (decision attribute): Respondents who reported having ever had CHD or MI.
+								<ul>	
+									<li>BMI: Body Mass Index.</li>
+									<li>Smoking: respondents who have smoked at least 100 cigarettes in their entire life.</li>
+									<li>AlcoholDrinking: corresponds to adult men who drink more than 14 drinks per week and adult women who drink more than 7 drinks per week.</li>
+									<li>Stroke - answers the question: have you ever been told or have you had a stroke?</li>
+									<li>PhysicalHealth: including physical illnesses and injuries, answers the question: for how many days in the last 30 days was your physical health not good? (from 0 to 30 days)</li>
+									<li>MentalHealth: On how many days in the last 30 days was your mental health not good? (from 0 to 30 days).</li>
+									<li>DiffWalking: answer do you have serious difficulties walking or climbing stairs?</li>
+									<li>Sex: male or female.</li>
+									<li>AgeCategory: 14 age ranges.</li>
+									<li>Race: imputed race/ethnicity value.</li>
+									<li>Diabetic: Answers to Have you ever been diagnosed with diabetes?</li>
+									<li>PhysiclActivity: adults who reported having engaged in physical activity or exercise in the last 30 days, not including their usual job.</li>
+									<li>GenHealth: answer how would you rate your overall health?</li>
+									<li>SleepTime: responds to the average number of hours the person surveyed sleeps in a 24-hour period.</li>
+									<li>Asthma: Answers to Have you ever been diagnosed with asthma?</li>
+									<li>KidneyDisease: Answers to Have you ever been told you had kidney disease?, not including kidney stones, bladder infection, or incontinence.</li>
+									<li>SkinCancer: answers to have you ever been diagnosed with skin cancer.</li>
+								
+								</p>
+							<p>Methodology:</p>
+								<ol>
+									<li>Load database.</li>
+									<li>Analyze the dataset by calculating the number of attributes, instances, and missing data.</li>
+									<li>Know the attributes, the type of attribute, as well as how many and which observations they contain.</li>
+									<li>Understand the relationship between attributes by calculating quartiles, outliers, and their boxplot.</li>
+									<li>Calculate and know the statistical values of each attribute, such as mode, mean, maximum value, minimum value, variance and standard deviation.</li>
+									<li>Know how related the attributes are to each other through covariance.</li>
+									<li>Observe the type of distribution that the attributes have.</li>
+									<li>Discover if the classes are balanced, as well as the percentage of each of them.</li>
+							</ol>
+							
+							<p>From the functions developed, the following information from the database can be known. The results obtained by entering the Key Personal Indicators of Heart Disease data set into the data analysis program are shown below:</p>
+							<p>El dataset tiene 319795 instancias</p>
+<!-- 
+							<section><img src="images/Imagen2_.png" width="500" height="800" align="center"/></section>
+							<section><img src="images/Imagen3_.png" width="500" height="600" align="center"/></section> -->
+							<p>The Missing_Data() function allows knowing the amount of missing data, so that the user can decide whether to perform a data imputation.
+								In the specific case of the data set used, none of the attributes present missing data, however, this is not always the case. When there are missing data, the proportion of these must be considered and the necessary imputation methods must be assessed according to the nature of the data with which one works.</p>
+							<p>Now, in terms of statistics, the mode of the attributes, their maximum and minimum values, their mean or average, standard deviation, variance, and covariance were calculated and compared with the calculation of the same metrics using the Python libraries.</p>
+							<section><img src="images/statistics.png" width="400" height="300" align="center"/></section>
+							<p>Now, using the quartiles() function, the following quartiles were obtained for the SleepTime attribute, which coincide with what was obtained using the python libraries.</p>
+							<section><img src="images/cuartiles.png" width="150" height="50" align="center"/></section>
+							<p>Once the quartiles have been calculated, with the outlier() function it is known that the attribute has the following number of outliers:</p>
+							<section><img src="images/outlier.png" width="450" height="100" align="center"/></section>
+							<p>Since the quartiles are available, it is possible to make a box plot, with the Q1, Q2(median) and Q3 quartiles. In this case, the box plot of the BMI attribute is presented.</p>
+							<section><img src="images/bmi.png" align="center"/></section>
+							<p>A large number of outliers can be inferred from the Illustration above, exactly 10,396, as obtained with outlier(). Given that the median of the distribution is equal to 27.34, the equivalent of an overweight person, it can be said that 10,396 people are above this category.
+								Likewise, by means of a histogram of the attributes it is possible to know the type of distribution that they follow. The following illustration shows the distribution of the BMI attribute.</p>
+							<section><img src="images/distribucion_bmi.png" align="center"/></section>
+							<p>Now, with respect to the class balance, it can be said that there is a class imbalance with 91.44% for the 'No' class and 8.5% for the second class 'Yes', being the decision attribute HeartDisease.</p>
+							<section><img src="images/balance_clases.png" align="center"/></section>
+							<p>In the understanding that it is necessary to make a balance of classes, since the proportion between the only two classes is over unbalanced.
+								On the other hand, additionally, an encoded data set (from categorical to numeric) was created from a copy of the original data set, using the conversion() function. This function is responsible for assigning a numerical value to each of the observations of the categorical attributes. Where as a result it was obtained:</p>
+							<section><img src="images/codificado.png" align="center"/></section>
+							<section><img src="images/codificado2.png" align="center"/></section>
+							<p>Basically, in this generalized program -for any database- functions were generated that would allow knowing the behavior of the attributes and instances of the provided data set, as well as functions that allow obtaining statistical metrics from the data.
+								From the analysis carried out on a data set, it can be inferred if a class balance is required, if there are missing data and which imputation method to choose or if it is more convenient to eliminate the attribute or instance, which attributes are most relevant for the task what is sought to be done using the data, and the relationship between the attributes, as well as the behavior or trend of the data and whether the outliers are valid or invalid. Fortunately, the database used in this work does not present missing data, however, this is not common.
+								Finally, it is worth mentioning that data analysis is step 0 in the preprocessing of the data, since in this way you know what to expect from them, however, the data still needs to be normalized, since this facilitates and avoids biases in the comparison and analysis of these.</p>
+								<ul class="actions">
+									<li><a href="#footer" class="button">See more works related with</a></li>
+								</ul>
+							
+							</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt"  style="background-color:#e3e8e9;">
+				<div class="inner">
+					<h2> <span style = "color:#133f4b">Maybe you might be interested</span></h2>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://colab.research.google.com/drive/10pvjz0BIfJyX4yTWB9_rhziUhqbTFF6R?usp=sharing" class="button">Data Analysis</a></li>
+						</ul>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://drive.google.com/file/d/1CpnPzcDArfcoM9x6vbGEGmsGMi9nW_3r/view?usp=sharing" class="button">Imputation & Normalization</a></li>
+						</ul>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://colab.research.google.com/drive/1isZMD4k-CI7eaeGxeRhPTNU2m0GCvyhB?usp=sharing" class="button">Principal Components Analysis</a></li>
+						</ul>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://drive.google.com/file/d/1UTGDzSv0Ko1lizMYPxRrYD7_0P_yRtD2/view?usp=sharing" class="button">Kmeans vs BIRCH</a></li>
+						</ul>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://colab.research.google.com/drive/1JSZ_XJCkfOrqsF5mI5nnhmNhuidQHPTm?usp=sharing" class="button">Syntethic data: SMOTE</a></li>
+						</ul>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span>
+							<li><a  href="https://colab.research.google.com/drive/1Cy2kK8xyAQFXpinwpRPbUcHiLh63cOsp?usp=sharing" class="button"> Descending Gradient</a></li>
+						</ul>
+						<h2> <span style = "color:#133f4b">Using dataset: Down Jones</span></h2>
+						<ul class="actions">
+							<span class="icon solid major fa-link"></span> 
+							<li><a href="https://colab.research.google.com/drive/1KmSaeU9EJchNwOOKT6kmL4r5LL_Cjq2d?usp=sharing" class="button">Descending Gradient</a></li>
+						</ul>
+				</div>
+				
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

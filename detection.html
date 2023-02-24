@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio Sheila Leyva/myproject</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="images/programador (1).png">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header" style="background-color:#0B132B;">
+				<a href="index.html" class="title">Portfolio: Sheila Leyva</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!-- <li><a href="generic.html" class="active">Project</a></li> -->
+						<!-- <li><a href="elements.html">Elements</a></li> -->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper" >
+
+				<!-- Main -->
+					<section id="main" class="wrapper" style="background-color:#1C2541;">
+						<div class="inner">
+							<h1 class="major">A comparison of image detection models </h1>
+							<span class="image fit"><img src="images/tc.png" alt="" /></span>
+							<p>In this project, the performance of different object detection paradigms in thoracic lung tomography images is evaluated by identifying the lungs:</p>
+							<ol>
+								<li>Generate a dataset with computed tomography images of the chest for the application of lung detection.</li>
+								<li>Preprocess images to obtain the format and size appropriate to the needs of the project.</li>
+								<li>Label the respective classes of the objects that appear in the image, in this case a single class called: lung.</li>
+								<li>Test dataset generated with YOLOv4 model.</li>
+								<li>Test dataset generated with YOLOv5 model.</li>
+								<li>Test dataset generated with Detectron 2 model.</li>
+								<li>Test dataset generated with Tensorflow2 model.</li>
+								<li>Obtain performance metrics of the object detection paradigms used.</li>
+							</ol>
+
+							<p>For the training of the object detection models it is necessary to use specific structures that dictate how the labels and metadata are stored for an image data set, there are different types of formats, the most common are COCO JSON, YOLO and PASCALVOC.
+								This project seeks to detect left and right lung within a computed tomography image, these images are originally generated in DICOM format (Digital Imaging and Communication In Medicine, for the purposes of this project the images were converted from dcm format (DICOM) to jpg (an image compression format).
+								After the format conversion, an image was chosen from the set of images of each of the patient, that is, if the tomography study contained 30 slices or images, the image number equal to the median or the closest to that was chosen. value, in this case the image number 15, see the following illustration</p>
+								<section><img src="images/scans.png" width="700" height="300"/></section>
+								<section><img src="images/tc.png" width="700" height="300"/></section>
+							<p>Once the dataset with 173 images has been generated. These images were labeled with the LabelImg tool.
+								The images were then uploaded to RoboFlow, a computer vision support platform, which allows tagging images in JSON, XML, CSV and TXT formats and sharing work remotely with teammates. The reason this tool was used is its option to perform data augmentation and image splitting for training, testing, and validation.</p>
+				
+								<div class="inner">
+
+									<div class="features">
+										<section>
+											<img src="images/etiqueta.png" width="300" height="300" align="left"/>
+											<!-- <h3>Lorem ipsum amet</h3> -->
+											
+										</section>
+										<section>
+											<img src="images/blur.png" width="300" height="300" align="left"/>
+											<!-- <h3>Aliquam sed nullam</h3> -->
+										</section>
+										<section>
+											<img src="images/ruido.png" width="300" height="300" align="left"/>
+										<!-- 	<h3>Sed erat ullam corper</h3> -->
+										</section>
+										<section>
+											<img src="images/brillo.png" width="300" height="300" align="left"/>
+										<!-- 	<h3>Sed erat ullam corper</h3> -->
+										</section>
+								</div>
+								<section id="two" class="wrapper style3 fade-up" style="background-color:#1C2541;">
+
+								<p>In addition, a 416x416 pixel resizing was performed and the images were rotated to generate more variety in the dataset.
+								Finally, 381 images were generated. Taking care not to use images of the same patient in more than one of the sets, be it training, validation or testing.
+								NOTE: the name of the lung class is 15 in order to avoid an overlap when printing the name of the class and the reliability of the detection performed.</p>
+								<section><img src="images/roboflow.png" width="600" height="700"/></section>
+								</section>
+								<h2> <span style = "color:#f2f5f7">Results:</span></h2>
+								<p>AP obtained by each of the detection models used.
+									Table  shows the AP of the two models that could be trained correctly: YOLOv5 and Detectron2, of which the YOLOv5 network was the one that obtained the highest score for this metric.</p>AP obtained by each of the detection models used.
+									<section><img src="images/resulta.jpg" width="800" height="200"/></section>
+								</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper alt"  style="background-color:#e3e8e9;">
+			<div class="inner">
+				<h2> <span style = "color:#133f4b">You can consult the completed work here:</span></h2>
+					<ul class="actions">
+						<span class="icon solid major fa-link"></span> 
+						<li><a href="href=https://drive.google.com/file/d/1yw_V0IiDLUObFFu3e44_tb16Tejyjs5m/view?usp=sharing" class="button">YOLOv5</a></li>
+					</ul>
+					<ul class="actions">
+						<span class="icon solid major fa-link"></span> 
+						<li><a href="href= https://drive.google.com/file/d/1Y4pT-X2eNo5snIbUWwyQqZ_adDhJJ_fn/view?usp=sharing" class="button">EfficientDet v2</a></li>
+					</ul>
+					<ul class="actions">
+						<span class="icon solid major fa-link"></span> 
+						<li><a href="href= https://drive.google.com/file/d/1eEVNGLUpM2bp5DBJNPBH_JFEYo6vkH0_/view?usp=sharing" class="button">Detectron2</a></li>
+					</ul>
+					<ul class="actions">
+						<span class="icon solid major fa-link"></span> 
+						<li><a href="href= https://drive.google.com/file/d/12r1tzHpxVhO7wZuCYtEUa5NMvxchxbZZ/view?usp=sharing" class="button">Tensorflow2</a></li>
+					</ul>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
